@@ -3,19 +3,32 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 import RegisterPage from './pages/register/register.page';
 import LoginPage from './pages/login/login.page';
+import Homepage from './pages/homepage/hompage.page';
+
+//sidenav
+
+import SideBar from './components/sidenav/sidebar.component';
+
+
+
 
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+     <BrowserRouter>
+     <div className="App">
 
-        <Route path={'/register'} component={RegisterPage}></Route>
-        <Route path={'/login'} component={LoginPage}></Route>
       
-      </BrowserRouter>
-      
-    </div>
+     
+<SideBar />
+<Route path={'/register'} component={RegisterPage}></Route>
+<Route path={'/login'} component={LoginPage}></Route>
+<Route exact path={'/home'} component={Homepage}></Route>
+
+
+
+</div></BrowserRouter>
+ 
   );
 }
 

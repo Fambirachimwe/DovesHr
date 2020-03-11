@@ -1,0 +1,58 @@
+
+.sidebar{
+    position: absolute;
+    display: flex;
+    width: 25vw;
+    height: 100vh;
+    background: #ffffff;
+    // padding : 20px;
+
+    .colletions{
+        position: relative;
+        // top: 20%;
+        margin-top: 30%;
+        color:#9e9e9e ;
+        width: 100%;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+
+            
+            li{
+                
+                padding: 20px;
+                font-weight: bold;
+                transition: .600s ease-in;
+
+                i {
+                    position: relative;
+                    top: 5px;
+                    margin-right: 15px;    
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #9e9e9e ;
+                }
+            }
+
+            li:last-child{
+                margin-top: 20rem;
+            }
+
+            li:hover{
+                background: rgb(66, 91, 255);
+                
+
+                a{
+                    color: #ffffff;
+                }
+            }
+
+            
+        }
+
+        
+    }
+}

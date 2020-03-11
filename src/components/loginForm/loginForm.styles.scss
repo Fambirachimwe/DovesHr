@@ -1,0 +1,35 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    // grid-gap: 1rem;
+
+    .image-container{
+        background: #4135FC;
+    }
+
+    .row{
+        padding: 50px;
+    }
+
+    .form-container{
+        position: relative;
+        top: 40%;
+        transform: translate(0, -50%);
+        // width: 70%;
+        height: 60vh;
+        box-shadow:  1px 1px 10px #eeeeee, -1px -1px 10px #eeeeee;
+        padding: 30px;
+        border-radius:10px;
+        margin: 0px;
+        justify-content: space-around;
+       
+
+        .inputs{
+            padding-top: 100px;
+        }
+        
+
+    }
+}

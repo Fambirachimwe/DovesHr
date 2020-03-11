@@ -1,21 +1,47 @@
 import React from 'react';
-
-import CustomButton from  '../CustomBtn/custombtn.component';
+import './registerForm.styles.scss';
+import CustomButton from '../CustomBtn/custombtn.component';
 
 
 
 
 const RegisterForm = () => (
-    <div className="register">  
-        <form>
-            <input type="text" name="username" placeholder="Username"/>
-            <input type="password" name="password" placeholder="Password"/>
-            <input type="password" name="confirm_password" placeholder="Confrim Password"/>
-            <input type="text" name="role" placeholder="Role"/>
+    <div className="register">
 
-            <CustomButton type={`submit`}>Register</CustomButton>
-        </form>
+        <div className="image-container">
+            <p> image  here</p>
+        </div>
+
+      
+        
+
+        <div className="row ">
+            <form className="col s12 form-container">
+                <div className="row inputs" >
+                    
+                    <div className="input-field col s12">
+                        <input type="email" name="text" placeholder="Username" autoComplete="new-username" />
+
+                    </div>
+
+                    <div className="input-field col s12">
+                        <input type="password" name="password" placeholder="password" autoComplete="new-password" />
+
+                    </div>
+
+                    <div className="input-field col s12">
+                        <input type="password" name="confirmPassword" placeholder="Confirm Password" autoComplete="confirm-password" />
+
+                    </div>
+
+                    <CustomButton type="submit">Create account</CustomButton>
+                </div>
+            </form>
+        </div>
+
     </div>
+
+
 );
 
 

@@ -1,0 +1,29 @@
+
+
+.homepage{
+    
+        width: 100%;
+        height: 100vh;
+        background-color: #f5f5f5;
+
+        .row{
+            
+            display: flex;
+            justify-content: space-between;
+            margin-left: 30%;
+            padding-top: 140px;
+
+            .card-container{
+                width: 160px;
+                // height: 50px;
+                background: #ffffff;
+                padding : 30px;
+                border-radius: 8px;
+                box-shadow:  1px 1px 10px #eeeeee, -1px -1px 10px #eeeeee;
+            }
+        }
+
+    
+
+
+}
