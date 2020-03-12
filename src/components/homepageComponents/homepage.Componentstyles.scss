@@ -1,0 +1,20 @@
+.row{
+    
+    
+    // display: flex;
+    
+    justify-content: space-between;
+    // margin-left: 20rem;
+    // left: 50%;
+    padding-top: 140px;
+
+    .card-container{
+        float: right;
+        width:170px;
+        height: 150px;
+        background: #ffffff;
+        padding : 30px;
+        border-radius: 8px;
+        box-shadow:  1px 1px 10px #eeeeee, -1px -1px 10px #eeeeee;
+    }
+}

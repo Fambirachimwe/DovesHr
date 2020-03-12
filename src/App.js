@@ -1,5 +1,7 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Router, Route } from 'react-router-dom';
+
+
 
 import RegisterPage from './pages/register/register.page';
 import LoginPage from './pages/login/login.page';
@@ -15,20 +17,20 @@ import SideBar from './components/sidenav/sidebar.component';
 
 function App() {
   return (
-     <BrowserRouter>
-     <div className="App">
-
-      
-     
-<SideBar />
-<Route path={'/register'} component={RegisterPage}></Route>
-<Route path={'/login'} component={LoginPage}></Route>
-<Route exact path={'/home'} component={Homepage}></Route>
+    <BrowserRouter>
+      <div className="App">
 
 
 
-</div></BrowserRouter>
- 
+          {/* <SideBar /> */}
+          <Route path={'/register'} component={RegisterPage}></Route>
+          <Route path={'/login'} component={LoginPage}></Route>
+          <Route exact path={'/home'} component={Homepage}></Route>
+
+
+
+      </div></BrowserRouter>
+
   );
 }
 

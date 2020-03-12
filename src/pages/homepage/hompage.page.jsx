@@ -1,31 +1,29 @@
 import React from 'react';
 import './homepage.styles.scss';
 
+import {Route} from 'react-router-dom';
+
+
+
+import SideBar from '../../components/sidenav/sidebar.component';
+import CardRow from '../../components/homepageComponents/homepage.componet';
+
+
 
 const Homepage = () => (
     <div className="homepage">
 
-        <div className="row">
-            <div className="card-container">
-                <i className="material-icons">local_pharmacy</i>
-            </div>
-
-            <div className="card-container">
-                the cards
-            </div>
-
-            <div className="card-container">
-                the cards
-            </div>
-
-            <div className="card-container">
-                the cards
-            </div>
+        
+        <div className="side">
+            <SideBar />
         </div>
 
-        <div className="row">
-
+        <div className="contents-container">
+            <Route exact  path={'/home'} component={CardRow} />
         </div>
+        
+
+    
         
     </div>
 );
