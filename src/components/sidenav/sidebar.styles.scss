@@ -17,13 +17,16 @@
         ul{
             display: flex;
             flex-direction: column;
+         
 
             
-            li{
+            a{
                 
                 padding: 20px;
                 font-weight: bold;
                 transition: .600s ease-in;
+                text-decoration: none;
+                color: #9e9e9e ;
 
                 i {
                     position: relative;
@@ -31,23 +34,16 @@
                     margin-right: 15px;    
                 }
 
-                a{
-                    text-decoration: none;
-                    color: #9e9e9e ;
-                }
+               
             }
 
-            li:last-child{
+            a:last-child{
                 margin-top: 20rem;
             }
 
-            li:hover{
+            a:hover{
                 background: rgb(66, 91, 255);
-                
-
-                a{
-                    color: #ffffff;
-                }
+                color: #ffffff;
             }
 
             

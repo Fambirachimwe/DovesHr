@@ -8,9 +8,14 @@ const SideBar = () => (
         <div className="colletions">
             <ul>
                 {/* <Router> */}
-                    <li> <Link to={'#'}> <i className="material-icons">home</i> Home </Link>  </li>
-                    <li> <Link to={'#'}> <i className="material-icons">add_circle_outline</i>  Add Department </Link> </li>
-                    <li> <Link to={'#'}><i className="material-icons">settings</i>  Settings </Link>  </li>
+                    {/* <li> <Link to={'/home'}> <i className="material-icons">home</i> Home </Link>  </li> */}
+
+                    <Link to={'/home'}>  <i className="material-icons">home</i> Home </Link>
+                    
+
+
+                    <Link to={'/add'}> <i className="material-icons">add_circle_outline</i>  Add Department </Link> 
+                    <Link to={'#'}><i className="material-icons">settings</i>  Settings </Link>  
                 {/* </Router> */}
                 
             </ul>
