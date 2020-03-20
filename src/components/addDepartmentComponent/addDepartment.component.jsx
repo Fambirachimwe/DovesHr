@@ -1,16 +1,36 @@
-import React from 'react';
-import CustomButton from '../CustomBtn/custombtn.component';
+import React, {useState} from 'react';
+// import CustomButton from '../CustomBtn/custombtn.component';
+
+import AddButton from '../addBtn/addBtn.component';
+import Form from '../addForm/addForm.component';
 
 
 
-const AddDepartment = () => (
-    <div className="add-department">
+const AddDepartment = () => {
+
+    const [state, setState] = useState({
+        toogle: false
+    });
+
+    return(
+        <div className="add-department">
         <h3>Add Deparment</h3>
 
-        <CustomButton type={'submit'}>  Add</CustomButton>
+       
+        <AddButton handleClick={() => {setState({toogle: !false})}}  />
+
+        <div className="form-container">
+            {
+                state.toogle === true ? ( <Form/> ) : (null)
+            }
+            
+        </div>
+        
 
     </div>
-);
+    )
+    
+};
 
 
 

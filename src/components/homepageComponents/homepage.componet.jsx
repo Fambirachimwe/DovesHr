@@ -1,39 +1,56 @@
 import React from 'react';
 import './homepage.Componentstyles.scss';
+import axios from 'axios';
+
+import CardContainer from '../cardContainer/cardContainer.component'
 
 
 
 
-const CardRow = () => (
+class CardRow extends React.Component {
 
-    <div>
+    constructor(){
+        super();
+        this.state = {
+            deparments: []
+        }
+    }
 
-    <h3>Departments</h3>
-        <div className="row">
+    componentDidMount(){
+        axios.get('http://127.0.0.1:4000/api/hr/dpt/')
+        .then(res => {
+            console.log(res.data.response)
+            this.setState({
+                deparments: res.data.response 
+            })
+        });
+    }
 
-            
 
-            <div className="card-container">
-                <i className="material-icons">local_pharmacy</i>
+    render() {
+        return (
+            <div>
+
+                <h3>Departments</h3>
+                <div className="row">
+                    {/* <CardContainer /> */}
+                    
+                    {
+                        this.state.deparments.map(dpt => (
+                            <CardContainer key={dpt._id} name={dpt.description} />
+                        ))
+                    }
+
+                </div>
             </div>
+        )
+    }
 
-            <div className="card-container">
-                the cards
-    </div>
-
-            <div className="card-container">
-                the cards
-    </div>
-
-            <div className="card-container">
-                the cards
-    </div>
-        </div>
-
-    </div>
+}
 
 
-);
+
+
 
 export default CardRow;
 

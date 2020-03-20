@@ -1,20 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Router, Route, Switch } from 'react-router-dom';
-
-
+import { BrowserRouter,  Route, Switch } from 'react-router-dom';
 
 import RegisterPage from './pages/register/register.page';
 import LoginPage from './pages/login/login.page';
 import Homepage from './pages/homepage/hompage.page';
-import AddDepartment from './components/addDepartmentComponent/addDepartment.component';
 
-
+// import AddDepartment from './components/addDepartmentComponent/addDepartment.component';
 //sidenav
-
-import SideBar from './components/sidenav/sidebar.component';
-
-
-
+// import SideBar from './components/sidenav/sidebar.component';
 
 
 function App() {
@@ -22,23 +15,15 @@ function App() {
     <BrowserRouter>
       <div className="App">
 
-
-
-          {/* <SideBar /> */}
-
           <Switch>
             <Route exact path={'/register'} component={RegisterPage}></Route>
             <Route exact path={'/login'} component={LoginPage}></Route>
             <Route exact path={'/home'} component={Homepage}></Route>
             {/* <Route  path={'/add'} component={AddDepartment} ></Route> */}
           </Switch>
-          
-
-          
-
-
-
-      </div></BrowserRouter>
+        
+      </div>
+    </BrowserRouter>
 
   );
 }
